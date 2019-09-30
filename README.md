@@ -25,8 +25,8 @@ const createSpawn = require('create-spawn')
   `
   
 
-  stdout // buffer
-  stderr // buffer
+  stdout // Stream
+  stderr // Stream
 
 
 })()
@@ -44,8 +44,8 @@ const createSpawn = require('create-spawn')
     echo ${'test test test'}
   `
 
-  stdout // string
-  stderr // string
+  stdout // String
+  stderr // String
 
 
 })()
