@@ -3,6 +3,29 @@
   "version": "1.0.0",
   "description": "A simple package to handle child_process.spawn in a practical way",
   "main": "lib/createSpawn",
-  "author": "Gabriel Freitas",
-  "license": "MIT"
+  "author": "Gabriel Freitas (github.com/nneutrinno)",
+  "license": "MIT",
+  "keywords": [
+    "quick",
+    "spawn",
+    "create spawn",
+    "child_process",
+    "child process",
+    "create-spawn",
+    "exec",
+    "execFile"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nneutrinno/create-spawn.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nneutrinno/create-spawn/issues"
+  },
+  "homepage": "https://github.com/nneutrinno/create-spawn#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

@@ -20,7 +20,9 @@ A simple package to handle child_process.spawn in a practical way
 const createSpawn = require('create-spawn')
 
 (() => {
-  const { stdout, stderr } = createSpawn`echo ${'test test test'}`
+  const { stdout, stderr } = createSpawn`
+    echo ${'test test test'}
+  `
   
 
   stdout // buffer
@@ -38,8 +40,9 @@ const createSpawn = require('create-spawn')
 const createSpawn = require('create-spawn')
 
 (async () => {
-  const { stdout, stderr } = await createSpawn`echo ${'test test test'}`
-  
+  const { stdout, stderr, all } = await createSpawn`
+    echo ${'test test test'}
+  `
 
   stdout // string
   stderr // string
