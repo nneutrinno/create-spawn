@@ -1,6 +1,6 @@
 {
   "name": "create-spawn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple package to handle child_process.spawn in a practical way",
   "main": "lib/createSpawn",
   "author": "Gabriel Freitas (github.com/nneutrinno)",
@@ -19,7 +19,6 @@
     "type": "git",
     "url": "git+https://github.com/nneutrinno/create-spawn.git"
   },
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nneutrinno/create-spawn/issues"
   },
