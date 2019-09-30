@@ -1,0 +1,8 @@
+{
+  "name": "create-spawn",
+  "version": "1.0.0",
+  "description": "A simple package to handle child_process.spawn in a practical way",
+  "main": "lib/createSpawn",
+  "author": "Gabriel Freitas",
+  "license": "MIT"
+}
