@@ -23,7 +23,9 @@ const createSpawn = require('create-spawn')
   const { stdout, stderr } = createSpawn`
     echo ${'test test test'}
   `
-  
+  /*
+    Or createSpawn('echo', ['test', 'test', 'test'])
+  */
 
   stdout // Stream
   stderr // Stream
