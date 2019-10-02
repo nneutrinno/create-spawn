@@ -2,7 +2,7 @@
   "name": "create-spawn",
   "version": "1.0.3",
   "description": "A simple package to handle child_process.spawn in a practical way",
-  "main": "lib/createSpawn",
+  "main": "index.js",
   "author": "Gabriel Freitas (github.com/nneutrinno)",
   "license": "MIT",
   "keywords": [
@@ -23,8 +23,10 @@
     "url": "https://github.com/nneutrinno/create-spawn/issues"
   },
   "homepage": "https://github.com/nneutrinno/create-spawn#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   }
 }

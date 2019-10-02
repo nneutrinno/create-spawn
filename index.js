@@ -1,19 +1,20 @@
 const { spawn } = require('child_process')
-const prepareCommand = require('./prepareCommand')
+const prepareCommand = require('./lib/prepareCommand')
 
 
 function createSpawn(...params) {
-  if (isTaggedTemplateString(...params))
-    return createSpawn(...prepareCommand(...params))
+  const command = isTaggedTemplateString(...params)
+    ? prepareCommand(...params)
+    : params
 
-  const listen = spawn(...params)
+  const listen = spawn(...command)
 
   const promise = new Promise((resolve, reject) => {
     const state = {
       stdout: '',
       stderr: '',
       all: '',
-      command: params
+      command
     }
 
     ;['stdout', 'stderr'].forEach(dataListener)
