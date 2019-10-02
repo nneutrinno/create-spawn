@@ -1,6 +1,6 @@
 {
   "name": "create-spawn",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple package to handle child_process.spawn in a practical way",
   "main": "index.js",
   "author": "Gabriel Freitas (github.com/nneutrinno)",
