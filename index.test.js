@@ -4,29 +4,36 @@ const stream = require('stream')
 
 
 describe('Spawn', () => {
-  const listener = createSpawn('echo', ['oi'])
+  describe('Original way', () => {
+    createTests(createSpawn('echo', ['hi']))
+  })
 
-  
-  ;['stdout', 'stderr'].forEach(expectStream)
-  ;['stdout', 'stderr', 'all'].forEach(asyncAwaitExpectString)
+  describe('Using Tags', () => {
+    createTests(createSpawn`echo hi`)
+  })
 
 
+  function createTests(spawn) {
 
-  function asyncAwaitExpectString(key) {
-    describe('await listener.' + key, () => {
-      it('Should be a String', async () => {
-        const value = await listener
+    ;['stdout', 'stderr'].forEach(expectStream)
+    ;['stdout', 'stderr', 'all'].forEach(asyncAwaitExpectString)
 
-        expect(value[key]).toEqual(expect.any(String))
+    function asyncAwaitExpectString(key) {
+      describe('await spawn.' + key, () => {
+        it('Should be a String', async () => {
+          const value = await spawn
+
+          expect(value[key]).toEqual(expect.any(String))
+        })
       })
-    })
-  }
+    }
 
-  function expectStream(key) {
-    describe('listener.' + key, () => {
-      it('Should be a Stream', () => {
-        expect(listener[key]).toBeInstanceOf(stream)
+    function expectStream(key) {
+      describe('spawn.' + key, () => {
+        it('Should be a Stream', () => {
+          expect(spawn[key]).toBeInstanceOf(stream)
+        })
       })
-    })
+    }
   }
 })
