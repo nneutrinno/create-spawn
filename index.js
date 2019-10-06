@@ -1,5 +1,27 @@
+'use strict'
+
 const { spawn } = require('child_process')
 const prepareCommand = require('./lib/prepareCommand')
+
+/**
+ * @name createSpawn
+ * @description Main function
+ * @function
+ * @param {string} firstCommand
+ * @param {string[]} options
+ * @returns {Promise} Promise interface
+ * @license Licensed under [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT license](http://opensource.org/licenses/MIT)
+ */
+
+/**
+ * @name createSpawn^2
+ * @function
+ * @description Main function with tagged template strings
+ * @param {string[]}
+ * @param {...strings}
+ * @returns {Promise} Promise interface
+ * @license Licensed under [permissive](http://en.wikipedia.org/wiki/Permissive_free_software_licence) [MIT license](http://opensource.org/licenses/MIT)
+ */
 
 
 function createSpawn(...params) {
@@ -52,4 +74,3 @@ function isTaggedTemplateString(arg, ...otherArgs) {
 }
 
 module.exports = createSpawn
-

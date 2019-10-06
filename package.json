@@ -24,9 +24,12 @@
   },
   "homepage": "https://github.com/nneutrinno/create-spawn#readme",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "jsdoc-to-markdown": "^5.0.1"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "predoc": "jsdoc2md index.js > docs/API.md",
+    "doc": "cat docs/READ.md > README.md && echo '\n\n' >> README.md && cat docs/API.md >> README.md"
   }
 }
